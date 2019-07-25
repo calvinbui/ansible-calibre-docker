@@ -6,6 +6,7 @@ calibre_ports:
   - 8080:8080
   - 8081:8081
 calibre_config_directory: /tmp/calibre
+calibre_books_directory: /tmp/book
 calibre_environment_variables:
   PUID: "1000"
   PGID: "1000"

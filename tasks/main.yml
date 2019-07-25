@@ -16,6 +16,7 @@
       published_ports: "{{ calibre_ports }}"
       volumes:
         - "{{ calibre_config_directory }}:/config"
+        - "{{ calibre_books_directory }}:/books"
       env: "{{ calibre_environment_variables }}"
 
 - name: Create Calibre container
