@@ -23,8 +23,3 @@
 - name: Create Calibre container
   docker_container: "{{ calibre_container_parameters | combine(calibre_docker_additional_options) }}"
   register: calibre_container
-
-- name: Wait for Calibre start
-  wait_for:
-    port: "{{ calibre_ports[0].split(':')[0] }}"
-    host: "{{ calibre_container.container.NetworkSettings.IPAddress }}"
